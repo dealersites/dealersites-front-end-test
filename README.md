@@ -54,7 +54,8 @@
 - A seção de dados da loja conforme imagem **SectionLoja.png**, deve ser uma tab vertical que exibe os dados de cada loja. Essas informações podem ser obtidas nas tabelas **lojas**, **loja_telefones** e **loja_enderecos**.
     - Renderizar o mapa usando os embed do google maps conforme cadastrado nas tabelas acima citadas
     - Ao clicar na tab da loja desejada, deve exibir os dados da loja em questão
-
+- Não é necessário ter os links em elementos de tag href
+- Os dados que não estão nas tabelas do banco de dados, como veículos, sliders, banners etc, podem ser colocados diretamente no código html.
 
 ## Dúvidas?
 
