@@ -56,4 +56,6 @@
     - Ao clicar na tab da loja desejada, deve exibir os dados da loja em questão
 
 
+## Dúvidas?
 
+Caso restar dúvidas, não hesite em nos contatar pelo e-mail **adam@dealersites.com.br**
