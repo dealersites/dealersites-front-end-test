@@ -1,0 +1,4 @@
+name: dealer-sites-test
+recipe: laravel
+config:
+  webroot: public
