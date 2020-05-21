@@ -1,28 +1,34 @@
 # Dealer Sites - Test
 
 ## Requisitos:
+
 - [Lando](https://docs.lando.dev/basics/installation.html) -> https://docs.lando.dev/basics/installation.html
 - - Lando é uma abstração de **DOCKER** que facilita a vida de usuários iniciantes e Devs avançados é mais fácil de usar do que o **Docker Compose**
+- Ou [Docker-compose](https://docs.docker.com/compose/install/) -> https://docs.docker.com/compose/install/
 - [Docker](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt) -> https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-18-04-pt
-- [Docker-compose](https://docs.docker.com/compose/install/) -> https://docs.docker.com/compose/install/
 - Usar framework Bootstrap
 - Usar algum framerwork PHP (Laravel, Symfony, Cake PHP etc). Neste teste, estamos disponibilizando uma aplicação em laravel pronta para rodar a rota home ao qual será necessário criar o layout da página home que será o seu teste.
 - Além disso, será gerado um banco de dados com algumas tabelas com informações já populadas para uso no teste. 
 - Embora o banco de dados esteja pronto e disponível, você terá que criar os relacionamentos no framework para buscar esses dados e passar para sua view no front-end. Use da forma que achar melhor.
 - Caso deseje usar outro framework em seu teste, sinta-se a vontade. O SQL com o banco de dados e os dados necessários estão na pasta **sql** na raiz do teste. As imagens com o layout estão no diretório **layout-template** localizada também na raiz do projeto.
 
+### Caso não deseje usar docker para provisionar seu ambiente, você pode usar a pilha LAMP ou qualquer método para rodar PHP, Apache e MariaDB para rodar o projeto se for da sua preferência.
+
 ## Configurando o ambiente: 
-- Após a instalação do **Lando**, **Docker** e **Docker-compose**
+
+- Após a instalação do **Lando** ou **Docker-compose** e o **Docker**
 - Crie uma pasta no seu diretório Documentos chamada **projetos**
-- Dentro da pasta projetos execute o comando `git clone https://github.com/stephencamilo/apitest.git`
-- Entre na pasta apitest
-- Dentro da pasta apiteste execute o comando `lando start && lando composer install`, aguarde o lando montar o ambiente de desenvolvomento
-- Apos o setup o lando te dará algumas opções de URL entre elas deve estar [http://apitest.lndo.site/](http://apitest.lndo.site/)
-- - Essa página estará vazia pois ainda não criamos dados de test no bando
-- Para criar e polular o banco de dados (que já foi criado pelo lando) com dados dummy execute o seguinte comando:
-- - `lando php artisan migrate:fresh && lando php artisan test`
-- - ***(Esse comando cria um teste automático que executa uma Factory usando o Faker Generator para gerar dados no banco de dados)***
-- PRONTO agora o site pode ser visualizado na URL [http://apitest.lndo.site/](http://apitest.lndo.site/)
+- Dentro da pasta projetos execute o comando `git clone https://github.com/dealersites/dealersites-front-end-test.git`
+- Entre na pasta dealersites-front-end-test
+- Usando [Lando](https://docs.lando.dev/basics/installation.html)
+    - Dentro da pasta dealersites-front-end-test execute o comando `lando start && lando composer install`. Aguarde a finalização do processo.
+    - Uma vez finalizado, as URLs estarão disponíveis para rodar sua aplicação no navegador
+    - - Essa página estará vazia pois ainda não criamos dados de test no bando
+    - Para criar e polular o banco de dados rode seguinte comando:
+    - - `lando php artisan import:database`    
+    - PRONTO agora o projeto está disponível e rodando no seu navegador nas URLs informadas anteriormente
+- Usando [Docker-compose](https://docs.docker.com/compose/install/)
+    - Dentro da pasta dealersites-front-end-test execute o comando `docker-compose up -d`. Aguarde a finalização do processo.
 
 ## Escopo:
 - Codificar a página HOME baseada na imagem de layout nos seguintes diretórios:
