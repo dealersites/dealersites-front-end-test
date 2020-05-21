@@ -45,7 +45,7 @@
     - Campo telefone deve ter ao menos todos caracteres de um telefone válido
     - Campo telefone deve ter máscará para telefones com e ou sem o digito 9
     - Campo CNPJ ou CPF deve ter validação de número válido
-    - Enviar o formulário via XHR Request (Ajax, Axios etc) para o endpoint "/contact"
+    - Enviar o formulário via XHR Request (Ajax, Axios etc) para o endpoint `/contact`
     - Exibir a mensagem de sucesso no formulário após retorno da request. Não é necessário nenhuma trativa no back-end. Já existe a rota definada no framework para responder para a request.
 - Os seletores no topo da página são itens em dropdown que devem puxar as informações a partir do banco de dados. Requisitos:
     - Seletor de loja deve puxar o cadastro de lojas da tabela **lojas** no banco de dados

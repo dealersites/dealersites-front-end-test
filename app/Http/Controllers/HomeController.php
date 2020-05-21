@@ -16,6 +16,6 @@ class HomeController extends Controller
 
     public function contact(Request $request)
     {
-        dd($request);
+        return response()->json(['message' => 'Mensagem enviada com sucesso!']);
     }
 }
