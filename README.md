@@ -29,6 +29,10 @@
     - PRONTO agora o projeto está disponível e rodando no seu navegador nas URLs informadas anteriormente
 - Usando [Docker-compose](https://docs.docker.com/compose/install/)
     - Dentro da pasta dealersites-front-end-test execute o comando `docker-compose up -d`. Aguarde a finalização do processo.
+    - Após finalizado, roder do comando `docker exec -it dealersites-test-php-fpm bash -c "php artisan config:cache"`
+    - Importe o banco de dados usando o comando `docker exec -it dealersites-test-php-fpm bash -c "php artisan import:database"`
+    - Pronto. Sua aplicação estará acessível em [http://localhost](http://localhost)
+    - Alguma vezes, o docker pode conflitar com permissão. Sendo assim, pode ser necessário rodar o comando `chmod -R 777 storage` na raiz do seu projeto.
 
 ## Escopo:
 - Codificar a página HOME baseada na imagem de layout nos seguintes diretórios:
