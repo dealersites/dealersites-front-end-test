@@ -57,6 +57,7 @@
     - Ao clicar na tab da loja desejada, deve exibir os dados da loja em questão
 - Não é necessário ter os links em elementos de tag href
 - Os dados que não estão nas tabelas do banco de dados, como veículos, sliders, banners etc, podem ser colocados diretamente no código html.
+- As imagens para o slider, banners, veículos etc, estão localizadas no diretório `resources/images` a partir da raiz do projeto.
 
 ## Dúvidas?
 
