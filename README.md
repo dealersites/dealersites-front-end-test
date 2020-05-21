@@ -21,20 +21,21 @@
 - Dentro da pasta projetos execute o comando `git clone https://github.com/dealersites/dealersites-front-end-test.git`
 - Entre na pasta dealersites-front-end-test
 - Usando [Lando](https://docs.lando.dev/basics/installation.html)
+    - Faça uma cópia do arquivo `.env.example` e renomeie para `.env`
     - Dentro da pasta dealersites-front-end-test execute o comando `lando start && lando composer install`. Aguarde a finalização do processo.
-    - Uma vez finalizado, as URLs estarão disponíveis para rodar sua aplicação no navegador
-    - - Essa página estará vazia pois ainda não criamos dados de test no bando
+    - Uma vez finalizado, as URLs estarão disponíveis e informadas no terminal para rodar sua aplicação no navegador
     - Para criar e polular o banco de dados rode seguinte comando:
     - - `lando php artisan import:database`    
     - PRONTO agora o projeto está disponível e rodando no seu navegador nas URLs informadas anteriormente
 - Usando [Docker-compose](https://docs.docker.com/compose/install/)
     - Dentro da pasta dealersites-front-end-test execute o comando `docker-compose up -d`. Aguarde a finalização do processo.
     - Após finalizado, rode o comando `docker exec -it dealersites-test-php-fpm bash -c "composer install"`
+    - Faça uma cópia do arquivo `.env.example`  e renomeie para `.env`
     - Após finalizado o comando acima, rode o comando `docker exec -it dealersites-test-php-fpm bash -c "php artisan config:cache"`
     - Importe o banco de dados usando o comando `docker exec -it dealersites-test-php-fpm bash -c "php artisan import:database"`
     - Pronto. Sua aplicação estará acessível em [http://localhost](http://localhost)
     - Alguma vezes, o docker pode conflitar com permissão. Sendo assim, pode ser necessário rodar o comando `chmod -R 777 storage` na raiz do seu projeto.
-
+    
 ## Escopo:
 - Codificar a página HOME baseada na imagem de layout nos seguintes diretórios:
     - Desktop -> "layout-template/Home.png"
